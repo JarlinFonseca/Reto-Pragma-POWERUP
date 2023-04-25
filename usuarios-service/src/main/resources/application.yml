@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/powerup
+    username: root
+    password: admin
+  application:
+    name: usuarios-service
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+appDescription: "Pragma Powerup"
+appVersion: "1.0.0"
+
+hystrix:
+  shareSecurityContext: true
+feign:
+  hystrix:
+    enabled: true

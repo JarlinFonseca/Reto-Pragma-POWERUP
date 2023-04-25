@@ -1,0 +1,23 @@
+server:
+  port: 8082
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/plazoleta
+    username: root
+    password: admin
+  application:
+    name: plazoleta-service
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+appDescription: "Pragma Powerup"
+appVersion: "1.0.0"
+
+hystrix:
+  shareSecurityContext: true
+feign:
+  hystrix:
+    enabled: true
